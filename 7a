@@ -1,0 +1,40 @@
+// Flutter & Dart - Basic Dart Example
+
+Future<void> main() async {
+  // Strong typing and type inference
+  int age = 20;
+  double height = 5.2;
+  bool isStudent = true;
+  String name = "Karthik";
+
+  // Type inference
+  var college = "NEC";
+  final course = "BTech CSE";
+
+  // Null safety
+  String? nickname;
+  nickname = null;
+
+  print("Name: $name");
+  print("Age: $age");
+  print("Height: $height");
+  print("Student: $isStudent");
+  print("College: $college");
+  print("Course: $course");
+  print("Nickname: $nickname");
+
+  // Everything is an object
+  print(name.runtimeType);
+  print(age.runtimeType);
+  print(isStudent.runtimeType);
+
+  // Asynchronous programming
+  String result = await getMessage();
+  print(result);
+}
+
+// Async function
+Future<String> getMessage() async {
+  await Future.delayed(Duration(seconds: 1));
+  return "Hello from Dart!";
+}
